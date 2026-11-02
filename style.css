@@ -1,0 +1,21 @@
+*{box-sizing:border-box}
+body{margin:0;background:#0b0d10;color:#e8ecf1;
+     font:15px/1.4 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+     padding:26px 22px 40px}
+header{display:flex;align-items:center;gap:12px;margin-bottom:4px}
+.logo{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;
+      font-weight:700;font-size:14px;background:linear-gradient(135deg,#3b82f6,#7c3aed)}
+h1{font-size:16px;font-weight:650;margin:0}
+h2{font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:#5d6673;
+   margin:24px 0 10px 2px;font-weight:600}
+.hint{font-size:11.5px;color:#6b7482;margin:0 0 20px 40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.tile{background:#12161c;border:1px solid #232a34;border-radius:10px;padding:15px 13px;
+      min-height:78px;display:flex;flex-direction:column;justify-content:space-between;
+      text-decoration:none;color:#e8ecf1;transition:.13s}
+.tile:hover{background:#1a2029;border-color:#3b82f6;transform:translateY(-2px)}
+.tile .ico{font-size:17px}
+.tile .name{font-size:12.5px;font-weight:600}
+.tile .meta{font-size:10.5px;color:#5d6673}
+footer{margin-top:28px;padding-top:14px;border-top:1px solid #1e232b;
+       font-size:11px;color:#5d6673}
