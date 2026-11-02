@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google Classroom</title>
+<link rel="icon" href="https://ssl.gstatic.com/classroom/favicon.png">
+<style>
+  html,body{margin:0;height:100%;background:#0b0d10;font:13px system-ui}
+  #bar{display:flex;gap:10px;align-items:center;padding:7px 12px;background:#15181d;
+       color:#9aa4b2;height:34px}
+  #bar a{color:#8ab4f8;text-decoration:none}
+  #host{opacity:.7}
+  #direct{margin-left:auto}
+  iframe{border:0;width:100%;height:calc(100% - 34px);display:block;background:#0b0d10}
+</style>
+</head>
+<body>
+<div id="bar">
+  <a href="index.html">&larr; Back</a>
+  <span id="host">loading&hellip;</span>
+  <a id="direct" href="#" target="_blank" rel="noreferrer">Open direct &nearr;</a>
+</div>
+<iframe id="f" allowfullscreen
+  allow="fullscreen; gamepad; encrypted-media; autoplay; clipboard-read; clipboard-write"
+  referrerpolicy="no-referrer"></iframe>
+<script>
+  const u = new URLSearchParams(location.search).get('u');
+  const f = document.getElementById('f');
+  if (u) {
+    f.src = u;
+    document.getElementById('host').textContent = new URL(u).hostname;
+    document.getElementById('direct').href = u;
+  } else { location.replace('index.html'); }
+</script>
+</body>
+</html>
